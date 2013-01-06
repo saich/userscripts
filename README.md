@@ -12,3 +12,7 @@ Removes the 2 article limit for guest users on http://www.drdobbs.com/
 estockdaily.user.js
 --------------------
 Removes the registration modal dialog that appears on all the pages of http://estockdaily.com for all non-registered users.
+
+whatsonindia.user.js
+--------------------
+Removes the registration modal dialog that appears on all the pages of http://whatsonindia.com for all non-registered users.
