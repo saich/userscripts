@@ -3,7 +3,7 @@
 // @namespace  http://saiprasad.me/
 // @version    0.1
 // @description  Small utility to enable pasting the login password on Online SBH site.
-// @match      https://www.onlinesbh.com/retail/sbhlogin.htm
+// @match      https://www.onlinesbh.com/retail/*login.htm
 // ==/UserScript==
 
 (function () {
@@ -11,7 +11,7 @@
     if (el) {
         el.onfocus = function() {};
         el.onblur = function() {};
-        el.onpaste = function () {return true;}
+        el.onpaste = function () {return true;};
         el.onkeypress = el.onkeydown = function() {};
     }
 })();
