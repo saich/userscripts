@@ -1,9 +1,10 @@
 // ==UserScript==
-// @name TechCrunch - Stay Focussed
+// @name Wikipedia - Stay Focussed
 // @namespace  http://saiprasad.me/
-// @description Unfocusses clutter on TechCrunch and helps on focussing on content that matter
-// @match http://techcrunch.com/*
-// @match https://techcrunch.com/*
+// @version 0.1
+// @description Unfocusses clutter on Wikipedia and helps on focussing on content that matter
+// @match http://en.wikipedia.org/*
+// @match https://en.wikipedia.org/*
 // ==/UserScript==
 
 /*global window, document*/
@@ -15,7 +16,7 @@
         ID_STYLE = "__focussed";
 
     // main article container
-    var article = document.querySelector(".left-container");
+    var article = document.querySelector("#content");
     if (article) {
         article.classList.add(CLASS_CONTENT);
 
@@ -36,7 +37,7 @@
     }
 
     // Garbage inside the article
-    var garbage = document.querySelectorAll("#comments,#post-share-widget,.lazy-share-widget,.top-featured-posts,.module-sponsored-ads");
+    var garbage = document.querySelectorAll(".noprint,.editsection,.navbox,.metadata,.articleFeedback,.catlinks, #siteNotice, .mw-editsection");
     for (var i = 0, l = garbage.length; i < l; i++) {
         var child = garbage.item(i);
         child.classList.add(CLASS_GARBAGE);
