@@ -2,6 +2,7 @@
 // @name TechCrunch - Stay Focussed
 // @namespace  http://saiprasad.me/
 // @description Unfocusses clutter on TechCrunch and helps on focussing on content that matter
+// @version 0.2
 // @match http://techcrunch.com/*
 // @match https://techcrunch.com/*
 // ==/UserScript==
@@ -15,7 +16,7 @@
         ID_STYLE = "__focussed";
 
     // main article container
-    var article = document.querySelector(".left-container");
+    var article = document.querySelector("div[role=main]");
     if (article) {
         article.classList.add(CLASS_CONTENT);
 
@@ -36,7 +37,7 @@
     }
 
     // Garbage inside the article
-    var garbage = document.querySelectorAll("#comments,#post-share-widget,.lazy-share-widget,.top-featured-posts,.module-sponsored-ads");
+    var garbage = document.querySelectorAll("footer, .feature-island-container, .l-sidebar, .social-cluster, .social-share, aside, .article-extra");
     for (var i = 0, l = garbage.length; i < l; i++) {
         var child = garbage.item(i);
         child.classList.add(CLASS_GARBAGE);
