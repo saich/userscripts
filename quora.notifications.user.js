@@ -4,6 +4,7 @@
 // @version    0.1
 // @description  Hides the read items in Quora's notifications page. Can be toggled with Shift + ~.
 // @match      https://www.quora.com/notifications
+// @match      http://www.quora.com/notifications
 // ==/UserScript==
 
 /*global window, document*/
